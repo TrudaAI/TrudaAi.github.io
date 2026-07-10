@@ -1,0 +1,109 @@
+:root {
+    --bg-color: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-main: #2d3748;
+    --text-muted: #718096;
+    --accent: #3182ce;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    color: #1a202c;
+}
+
+header p {
+    color: var(--text-muted);
+    margin-top: 0;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.report-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.report-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #1a202c;
+}
+
+.status-badge {
+    background: #ebf8ff;
+    color: #2b6cb0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+h3 {
+    color: #2d3748;
+    margin-top: 25px;
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.media-container {
+    margin: 20px 0;
+}
+
+.media-box {
+    background: #1a202c;
+    color: #fff;
+    border-radius: 6px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.media-box h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #e2e8f0;
+}
+
+video {
+    border-radius: 4px;
+    display: block;
+}
