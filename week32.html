@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 32 Report - Truda Load Bay Tracking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Load Bay Computer Vision Progress</h1>
+        <p><a href="index.html">← Back to Main Dashboard</a></p>
+    </header>
+
+    <main class="timeline">
+        <article class="report-card">
+            <div class="report-header">
+                <h2>Week Ending: July 10, 2026 (Week 32)</h2>
+                <span class="status-badge milestone">Major Milestone Achieved</span>
+            </div>
+            
+            <div class="report-body">
+                <h3>Summary & Key Progress</h3>
+                <ul>
+                    <li><strong>Load Bay 17 Breakthrough:</strong> Completely overhauled the internal tracking script (`mt5.py`) using a physical-measurement blueprint. By linking the constant 51.5 cm width of our conveyor belt to camera pixels, the system can now calculate actual object dimensions automatically.</li>
+                    <li><strong>Solves Packaging Glare & Seams:</strong> Implemented a "clustering rule" that automatically stitches fragmented frames back into single full-object counts. If the camera detects split boxes within 12 cm of each other (caused by clear human-packed backings or prominent machine-packed center seams), it forcefully groups them into a unified bag size.</li>
+                    <li><strong>High-Volume Dashboard Data Auditing:</strong> Coordinated with Arcaidea to introduce flexible pagination (up to 96 frames per page) and bulk tools, dropping sorting overhead from hours down to just one hour. Manually audited and pushed <strong>29,233 total captures</strong> through the vector catalog pipeline this week.</li>
+                </ul>
+
+                <h3>Live Run Shift Test Metrics</h3>
+                <p>We executed a live truck-loading test during a shift to evaluate the updated deterministic tracking framework under actual operational speeds:</p>
+                <ul>
+                    <li><strong>Initial Container Load:</strong> Hit <strong>100% counting accuracy</strong> across the first 250 bags deep inside the vehicle container.</li>
+                    <li><strong>Overall Shift Performance:</strong> Maintained an overall tracking consistency <strong>above 95%</strong> across consecutive high-volume batches—a massive leap forward from last week's sub-40% baseline metrics.</li>
+                    <li><strong>Performance Thresholds:</strong> Noted minor volume tracking struggles when highly dense, mixed bag sizes strike the belt simultaneously.</li>
+                </ul>
+
+                <h3>Footage & Visual Analysis</h3>
+                <p>Diagnostic video showing the pixel-stitching engine in action during our live shift test:</p>
+                
+                <div class="media-container">
+                    <div class="media-box">
+                        <h4>Live Truck Test - Dual View Diagnostics</h4>
+                        <video controls width="100%">
+                            <source src="media/DIAGNOSTIC_RUN.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="explanation-box">
+                    <h4>How the Dual-View Tracking Works:</h4>
+                    <p>The diagnostic video uses a split layout to show exactly how the AI "sees" and handles the bags on the factory floor:</p>
+                    <ul>
+                        <li><strong>Top Feed (Live Footage):</strong> This shows the normal camera view of the conveyor. You will see colored <strong>counting boxes</strong> locking onto the bags. Thanks to our new formula, the script measures the exact size of the bag in real-time. If a box doesn't match a standard bag size footprint, the system investigates it further rather than blindly adding it to the tally.</li>
+                        <li><strong>Bottom Feed (The Black Mask):</strong> This is a filtered view where the background conveyor belt is completely blacked out, leaving only moving objects lit up in white. When a bag lands on its back, its crinkly plastic surface reflects glare, making it look like 3 or 4 tiny shattered white shapes on the black screen. </li>
+                        <li><strong>The "Stitching" Logic:</strong> Our script looks at this black mask and measures the physical gap between those shattered white shapes. If they are within 12 cm of each other and fit neatly inside a standard 40cm x 40cm boundary, the code immediately glues them together into one large, solid object. This prevents a single reflective bag from being accidentally miscounted as 3 separate smaller items.</li>
+                    </ul>
+                </div>
+
+                <h3>Calibration & Measurement Verifications</h3>
+                <p>Below are reference captures demonstrating how the system establishes its physical scale and groups the pixels into verified product dimensions:</p>
+
+                <div class="image-grid">
+                    <div class="image-box">
+                        <img src="media/B001_C048_ID47_125532.jpg" alt="Conveyor belt pixel mapping calibration" style="width:100%; border-radius: 6px;">
+                        <h5>1. Conveyor Belt Baseline Calibration</h5>
+                        <p>Locking onto the 51.5 cm physical belt width. The script uses this static horizontal span to translate camera pixels into real-world centimeters across the entire tracking zone.</p>
+                    </div>
+                    <div class="image-box">
+                        <img src="media/B001_C084_ID83_125840.jpg" alt="Visual representation of box clustering rule" style="width:100%; border-radius: 6px;">
+                        <h5>2. Clustering Fragmented Targets</h5>
+                        <p>A visual breakdown showing how independent, erratic bounding boxes caused by packaging glare are grouped together once they fall within the 12 cm proximity limit.</p>
+                    </div>
+                </div>
+
+                <h3>Environmental Challenges & Next Steps</h3>
+                <ul>
+                    <li><strong>Sunlight Isolation:</strong> Tracking accuracy dipped near the back of the run as the conveyor extended closer to the open garage roller door where daytime sunlight bled in. Building a physical isolation tunnel over the belt remains the core priority to block shifting exterior glare.</li>
+                    <li><strong>Dispatch Integration:</strong> Installing a dedicated physical numpad at the dispatch station next week to train loading workers to manually trigger batch tracking. I will look into purchasing an external indicator light to alert workers when the system is actively in "counting mode" so they don't have to look down at a monitor screen.</li>
+                    <li><strong>Predictive SKU Tracking:</strong> Expanding the script's tracking logic to measure the physical gaps between moving products. Because different flavors sit and space out uniquely on the fast teeth conveyor, this will allow us to predict what specific SKU is being loaded based entirely on its velocity and spacing profile.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+</body>
+</html>
