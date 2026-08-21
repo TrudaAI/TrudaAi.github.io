@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pi Cam AI Vision Pipeline - Baler & Conveyor System Audit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Header / Executive Summary -->
+  <header class="pres-header">
+    <div>
+      <span class="badge-live">LIVE SYSTEM AUDIT</span>
+      <h1>Pi Cam AI Capture & Classification</h1>
+      <p class="subtitle">Conveyor Bag Detection Analytics & Capture Quality Review</p>
+    </div>
+    <div class="system-time">
+      <span class="dot-pulse"></span> Pipeline Active
+    </div>
+  </header>
+
+  <main class="pres-container">
+
+    
+    <!-- SECTION 1: Top High-Level Metrics (System Audit) -->
+    <section class="kpi-grid">
+      <div class="kpi-box primary">
+        <span class="label">Total Vector Captures</span>
+        <span class="big-number">194,570</span>
+        <span class="subtext">203 Total Catalog Entities</span>
+      </div>
+
+      <div class="kpi-box success">
+        <span class="label">Matched Captures</span>
+        <span class="big-number">184,818</span>
+        <span class="subtext">Alleged Match Accuracy</span>
+      </div>
+
+      <div class="kpi-box warning">
+        <span class="label">Sugarbird Actual Volume</span>
+        <span class="big-number">~500</span>
+        <span class="subtext">Severely Over-Counted in Matched Metrics</span>
+      </div>
+
+      <div class="kpi-box danger">
+        <span class="label">System Failures (Unknowns)</span>
+        <span class="big-number">9,752</span>
+        <span class="subtext">109 Unmapped Flawed Clusters</span>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Key Operational Findings & Vendor Audit -->
+    <section class="two-col-layout">
+      
+      <!-- Left Column: Vendor Failure Context -->
+      <div class="card-panel danger-border">
+        <h2>Supplier System Audit Findings</h2>
+        <ul class="bullet-list">
+          <li>
+            <strong>Vector Matcher Failure:</strong> The 9,752 "unknown" captures represent a critical system flaw—the matcher fails to identify standard bags even at 85–90% confidence thresholds.
+          </li>
+          <li>
+            <strong>Size & Color Misclassification:</strong> Captures in the unknown folder display obvious similarities in size and color, proving the vector engine is failing to group basic visual duplicates.
+          </li>
+          <li>
+            <strong>Inaccurate Volume Claims:</strong> Supplier claims of high accuracy are contradicted by data; total Sugarbird actual volume is only ~500 items, despite bloated catalog metrics.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Top Brand Drivers (Audited) -->
+      <div class="card-panel info-border">
+        <h2>Top Brand Volume Leaders</h2>
+        <div class="brand-bar-group">
+          <div class="brand-item">
+            <span>Chippa Brand</span>
+            <strong>80,721 bags</strong>
+          </div>
+          <div class="brand-item">
+            <span>Go-Slos Brand (incl. Puffs)</span>
+            <strong>38,004 bags</strong>
+          </div>
+          <div class="brand-item">
+            <span>Stylos Brand</span>
+            <strong>20,132 bags</strong>
+          </div>
+          <div class="brand-item">
+            <span>Bigga Brand</span>
+            <strong>15,907 bags</strong>
+          </div>
+          <div class="brand-item">
+            <span>Flyers Brand</span>
+            <strong>10,725 bags</strong>
+          </div>
+          <div class="brand-item">
+            <span>Sugarbird Brand (Actual: ~500)</span>
+            <strong>7,330 bags (Logged)</strong>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION 3: Physical Camera Hardware Baseline -->
+    <section class="card-panel section-spacing">
+      <div class="section-header-block">
+        <span class="step-num">STAGE 1</span>
+        <h2>Hardware Rig Setup over Baler Conveyor</h2>
+      </div>
+      <p class="section-desc">Physical placement and overhead enclosure mounting for the Pi Cam AI capture line.</p>
+      
+      <div class="media-grid grid-3">
+        <div class="media-card">
+          <div class="img-wrapper"><img src="Rig Setup/1.jpeg" alt="Rig Setup 1"></div>
+          <p class="caption">Overhead Mount Positioning</p>
+        </div>
+        <div class="media-card">
+          <div class="img-wrapper"><img src="Rig Setup/2.jpeg" alt="Rig Setup 2"></div>
+          <p class="caption">Conveyor Lighting Housing</p>
+        </div>
+        <div class="media-card">
+          <div class="img-wrapper"><img src="Rig Setup/3.jpeg" alt="Rig Setup 3"></div>
+          <p class="caption">Camera Field-of-View Alignment</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Environmental Lighting Baseline -->
+    <section class="card-panel section-spacing">
+      <div class="section-header-block">
+        <span class="step-num">STAGE 2</span>
+        <h2>Environmental Lighting Shifts</h2>
+      </div>
+      <p class="section-desc">Analysis of vector color consistency and ambient sunlight shifts ("Golden Hour") impact on camera exposure.</p>
+      
+      <div class="lighting-stacked-container">
+        
+        <!-- FULL WIDTH GRID 1: Vector Color Consistency -->
+        <div class="lighting-block vector-block">
+          <div class="block-header">
+            <span class="indicator-dot blue"></span>
+            <div>
+              <h3>Vector Color Consistency</h3>
+              <span class="block-subtext">Sequential frames packed side-by-side to review color consistency</span>
+            </div>
+          </div>
+          
+          <div class="packed-grid grid-vector-tight">
+            <div class="packed-card"><div class="packed-wrapper"><img src="Vector Color/Light effect color conistency (1).png" alt="Vector 1"></div></div>
+            <div class="packed-card"><div class="packed-wrapper"><img src="Vector Color/Light effect color conistency (2).png" alt="Vector 2"></div></div>
+            <div class="packed-card"><div class="packed-wrapper"><img src="Vector Color/Light effect color conistency (3).png" alt="Vector 3"></div></div>
+            <div class="packed-card"><div class="packed-wrapper"><img src="Vector Color/Light effect color conistency (4).png" alt="Vector 4"></div></div>
+            <div class="packed-card"><div class="packed-wrapper"><img src="Vector Color/Light effect color conistency (5).png" alt="Vector 5"></div></div>
+            <div class="packed-card"><div class="packed-wrapper"><img src="Vector Color/Light effect color conistency (6).png" alt="Vector 6"></div></div>
+          </div>
+        </div>
+
+        <!-- FULL WIDTH GRID 2: Golden Hour Shift -->
+        <div class="lighting-block golden-block">
+          <div class="block-header">
+            <span class="indicator-dot amber"></span>
+            <div>
+              <h3>Golden Hour Shift (Ambient Glare / Shadows)</h3>
+              <span class="block-subtext">Continuous sunlight transition shift across 10 sequence frames</span>
+            </div>
+          </div>
+
+          <div class="packed-grid grid-golden-tight">
+            <div class="packed-card"><div class="packed-wrapper"><img src="Golden Hour/Golden Hour (1).png" alt="Golden Hour 1"></div></div>
+            <div class="packed-card"><div class="packed-wrapper"><img src="Golden Hour/Golden Hour (2).png" alt="Golden Hour 2"></div></div>
+            <div class="packed-card"><div class="packed-wrapper"><img src="Golden Hour/Golden Hour (3).png" alt="Golden Hour 3"></div></div>
+            <div class="packed-card"><div class="packed-wrapper"><img src="Golden Hour/Golden Hour (4).png" alt="Golden Hour 4"></div></div>
+            <div class="packed-card"><div class="packed-wrapper"><img src="Golden Hour/Golden Hour (5).png" alt="Golden Hour 5"></div></div>
+            <div class="packed-card"><div class="packed-wrapper"><img src="Golden Hour/Golden Hour (6).png" alt="Golden Hour 6"></div></div>
+            <div class="packed-card"><div class="packed-wrapper"><img src="Golden Hour/Golden Hour (7).png" alt="Golden Hour 7"></div></div>
+            <div class="packed-card"><div class="packed-wrapper"><img src="Golden Hour/Golden Hour (8).png" alt="Golden Hour 8"></div></div>
+            <div class="packed-card"><div class="packed-wrapper"><img src="Golden Hour/Golden Hour (9).png" alt="Golden Hour 9"></div></div>
+            <div class="packed-card"><div class="packed-wrapper"><img src="Golden Hour/Golden Hour (10).png" alt="Golden Hour 10"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: SKU Motion Blur / Brand Concern -->
+    <section class="card-panel section-spacing warning-border">
+      <div class="section-header-block">
+        <span class="step-num warning-bg">STAGE 3</span>
+        <h2>Product Specific Anomaly: Go-Slos SKU Blur</h2>
+      </div>
+      <p class="section-desc">Identified motion blur and print degradation on Go-Slos balers at current belt speeds.</p>
+      
+      <div class="media-grid grid-3">
+        <div class="media-card">
+          <div class="img-wrapper"><img src="Go-Slos Concern/Sku blur (1).png" alt="Go-Slos Blur 1"></div>
+          <p class="caption">Blur Sample 01</p>
+        </div>
+        <div class="media-card">
+          <div class="img-wrapper"><img src="Go-Slos Concern/Sku blur (2).png" alt="Go-Slos Blur 2"></div>
+          <p class="caption">Blur Sample 02</p>
+        </div>
+        <div class="media-card">
+          <div class="img-wrapper"><img src="Go-Slos Concern/Sku blur (3).png" alt="Go-Slos Blur 3"></div>
+          <p class="caption">Blur Sample 03</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Poor Data Justification & Vendor UI Screenshots -->
+    <section class="card-panel section-spacing danger-border">
+      <div class="section-header-block">
+        <span class="step-num danger-bg">STAGE 4</span>
+        <h2>Poor Data & Supplier Pipeline Audit Captures</h2>
+      </div>
+      <p class="section-desc">Visual proof of supplier system failure: uncatalogued image clusters, misclassified bag slices, and isolated vendor dashboard anomalies.</p>
+      
+      <!-- SUB-SECTION 1: Vendor Audit Dashboard Screenshots -->
+      <h3 class="sub-heading">Supplier Interface & Vector Matcher Failures</h3>
+      <div class="media-grid grid-4">
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-17 155101.png" alt="Vendor System Capture 01"></div><p class="caption">Audit Log 17/08</p></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-18 074859.png" alt="Vendor System Capture 02"></div><p class="caption">Audit Log 18/08 A</p></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-18 074923.png" alt="Vendor System Capture 03"></div><p class="caption">Audit Log 18/08 B</p></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-21 084031.png" alt="Vendor System Capture 04"></div><p class="caption">Vector Cluster Shift 21/08</p></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-21 084047.png" alt="Vendor System Capture 05"></div><p class="caption">Unknown Bucket Entry A</p></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-21 090016.png" alt="Vendor System Capture 06"></div><p class="caption">Unknown Bucket Entry B</p></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-21 090030.png" alt="Vendor System Capture 07"></div><p class="caption">Catalog Misalignment A</p></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-21 090043.png" alt="Vendor System Capture 08"></div><p class="caption">Catalog Misalignment B</p></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-21 090100.png" alt="Vendor System Capture 09"></div><p class="caption">Duplicate Vector Match Failure</p></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-21 090116.png" alt="Vendor System Capture 10"></div><p class="caption">Threshold Rejection</p></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-21 090155.png" alt="Vendor System Capture 11"></div><p class="caption">Match Confidence Anomaly</p></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-21 090223.png" alt="Vendor System Capture 12"></div><p class="caption">Color Grouping Failure</p></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-21 090229.png" alt="Vendor System Capture 13"></div><p class="caption">Size Matching Failure</p></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-21 090236.png" alt="Vendor System Capture 14"></div><p class="caption">False Negative Classification</p></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Screenshot 2026-08-21 090252.png" alt="Vendor System Capture 15"></div><p class="caption">System Audit Summary View</p></div>
+      </div>
+
+      <!-- SUB-SECTION 2: Machine Packed Slices (All 6 Samples) -->
+      <h3 class="sub-heading mt-20">Sliced Machine Packed Balers (On Backs)</h3>
+      <div class="media-grid grid-3">
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Sliced Machined packed Bailers on there backs  (1).png" alt="Sliced Machine 1"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Sliced Machined packed Bailers on there backs  (2).png" alt="Sliced Machine 2"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Sliced Machined packed Bailers on there backs  (3).png" alt="Sliced Machine 3"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Sliced Machined packed Bailers on there backs  (4).png" alt="Sliced Machine 4"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Sliced Machined packed Bailers on there backs  (5).png" alt="Sliced Machine 5"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Sliced Machined packed Bailers on there backs  (6).png" alt="Sliced Machine 6"></div></div>
+      </div>
+
+      <!-- SUB-SECTION 3: Small Sections on Balers (All 7 Samples) -->
+      <h3 class="sub-heading mt-20">Small Sliced Sections on Balers</h3>
+      <div class="media-grid grid-4">
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Sliced small section on bailer (1).png" alt="Small Section 1"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Sliced small section on bailer (2).png" alt="Small Section 2"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Sliced small section on bailer (3).png" alt="Small Section 3"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Sliced small section on bailer (4).png" alt="Small Section 4"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Sliced small section on bailer (5).png" alt="Small Section 5"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Sliced small section on bailer (6).png" alt="Small Section 6"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Sliced small section on bailer (7).png" alt="Small Section 7"></div></div>
+      </div>
+
+      <!-- SUB-SECTION 4: Human Packed & Halved Balers -->
+      <h3 class="sub-heading mt-20">Human Slices, Partial Cuts & Non-Product Captures</h3>
+      <div class="media-grid grid-4">
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Cut in half Bailer (1).png" alt="Cut 1"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Cut in half Bailer (2).png" alt="Cut 2"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Cut in half Bailer (3).png" alt="Cut 3"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Cut in half Bailer (4).png" alt="Cut 4"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Human Packed slices (1).png" alt="Human Slice 1"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Human Packed slices (2).png" alt="Human Slice 2"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Human Packed slices (3).png" alt="Human Slice 3"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Floor (1).png" alt="Floor 1"></div></div>
+        <div class="media-card"><div class="img-wrapper"><img src="poor data/Floor (2).png" alt="Floor 2"></div></div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Global Image Fullscreen Modal -->
+  <div id="imageModal" class="image-modal">
+    <div class="modal-content-container">
+      <span class="modal-close" id="modalClose">&times;</span>
+      <img class="modal-image" id="modalImg" src="" alt="Expanded View">
+      <p class="modal-caption" id="modalCaption"></p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      const modalCaption = document.getElementById('modalCaption');
+      const modalClose = document.getElementById('modalClose');
+
+      // Add click listener to all images in media cards and packed wrappers
+      document.querySelectorAll('.img-wrapper img, .packed-wrapper img').forEach(img => {
+        img.addEventListener('click', () => {
+          modal.classList.add('active');
+          modalImg.src = img.src;
+          
+          // Check for explicit caption or alt tag
+          const parentCard = img.closest('.media-card');
+          const captionText = parentCard ? parentCard.querySelector('.caption')?.innerText : null;
+          modalCaption.innerText = captionText || img.alt || 'Full Resolution Capture View';
+        });
+      });
+
+      // Close modal on close button click or background click
+      const closeModal = () => modal.classList.remove('active');
+      modalClose.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      // Close modal on Escape key press
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+          closeModal();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
