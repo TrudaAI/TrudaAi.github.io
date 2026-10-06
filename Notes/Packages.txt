@@ -1,0 +1,26 @@
+1. Navigation: react-router-dom
+You need this to separate the Login Portal, the Supplier Dashboard, and the Input Form. Without it, you're stuck managing complex "if-statements" to show different pages.
+
+2. Icons: lucide-react
+Clean, consistent, and lightweight icons. Use these for your status indicators (e.g., a red alert icon for expired certificates). It’s the industry standard for modern React apps.
+
+
+3. Data Fetching: axios & @tanstack/react-query
+Axios: Handles the actual communication with your Node/NestJS backend.
+
+React Query (TanStack): This is your biggest safety net. It handles caching, loading states, and "retrying" automatically if the local network blips. If Maureen refreshes the page, the data is still there without another database hit.
+
+
+
+4. Form Logic: react-hook-form & zod
+Forms are usually where web apps break.
+
+Zod: You define a "Schema" (e.g., Supplier Name must be a string, Expiry Date must be in the future).
+
+React Hook Form: Uses that Zod schema to validate Maureen's input before it even hits your backend. It prevents "bad data" from ever entering your PostgreSQL database.
+
+
+Step 2: Component Library (Shadcn/UI)
+For a 5-year legacy project, you don't want to write raw CSS for tables and date pickers. Shadcn/UI is the best choice because it installs the code directly into your project—you own it, so it won't break if a third-party library updates in 2028.
+
+npm install xlsx

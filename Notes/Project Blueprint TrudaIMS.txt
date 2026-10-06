@@ -1,0 +1,101 @@
+Project Blueprint: TrudaIMS
+Vision: A legacy-standard, on-premise Information Management System for supplier and raw material compliance.
+
+1. Core Technical Stack (The "Non-Negotiables")
+To ensure this lasts 5+ years without "babysitting," we are using a structured, type-safe stack:
+
+Frontend: React (Vite) + TypeScript
+
+Why: Type safety prevents runtime crashes when data structures change.
+
+Backend: NestJS (Node.js Framework)
+
+Why: Enforces a strict "Enterprise" architecture (Controllers/Services) that is easy for any developer to follow later.
+
+Database: PostgreSQL
+
+Why: No 10GB limit (unlike SQL Express), superior reliability, and better handling of JSON for future-proofing.
+
+ORM: Prisma
+
+Why: Syncs your database schema directly with your TypeScript types.
+
+Process Management: PM2
+
+Why: Automatically restarts the app if the server reboots or the process crashes.
+
+2. Data Requirements (From Maureen's "Starting Point")
+The system must capture and validate the following from the Excel baseline:
+
+A. Identification & Logistics
+Supplier & Manufacturer Names
+
+Ingredient/Product: (Dropdown: Maize Grit, Palm Oil, Flavour, etc.)
+
+Source: (Local vs. Import)
+
+Usage Scope: (Multi-select: Softs, Naks, Corn, Pretzels, Popcorns)
+
+Factory Allocation: (Pietermaritzburg, Pretoria, Cape Town, Queenstown)
+
+B. Compliance & Expiry Tracking (CRITICAL)
+The system must track Expiry Dates for:
+
+Supplier Questionnaires
+
+ISO/HACCP/FSSC/GFSI Certificates
+
+Halaal/Kosher Certificates
+
+C. Technical Safety Data
+References: Ingredient Specs (Ref IDs), Safety Data Sheets (SDS).
+
+Test Reports: Status tracking for Micro, Heavy Metals, Chemicals, and Pesticides (e.g., "Received - In Spec").
+
+Declarations: GMO, Melamine, Red Sudan.
+
+D. Approval Workflow
+Status: Approved, Not Approved, On Hold.
+
+Authority: DC Manager, COO, R&D Manager, or Buyer.
+
+Reasoning: Cost, Availability, Quantity, Compliance.
+
+3. Development Phases
+Phase 1: Infrastructure (The "Boring" Part)
+Set up PostgreSQL on the local server.
+
+Initialize NestJS backend and Prisma.
+
+Define the schema.prisma file based on the fields above.
+
+Phase 2: Security & Auth
+Implement simple Login Portal (Local Auth).
+
+Create Roles: Admin (Maureen/Full Access) and Viewer (Factory/Read-only).
+
+Phase 3: The Input Engine
+Build the React form using react-hook-form and Zod (for validation).
+
+Logic: If "Status" is set to "Approved," the "Approved By" field becomes mandatory.
+
+Phase 4: The Dashboard & Alerts
+Create a table view with filters for "Factory" and "Supplier."
+
+Alerts: Highlight rows where any Expiry Date is < 30 days away.
+
+4. Maintenance & Handover Rules
+No "Any" in TypeScript: Always define the interface for data.
+
+Database Backups: Set up a pg_dump script to run nightly to a network drive.
+
+Environment Variables: Keep all database credentials in a .env file; never hardcode IPs.
+
+Documentation: Comment the why, not the how. (e.g., "This check exists because Maureen requires double-approval for imports.")
+
+5. Success Metric (The "5-Year Test")
+Can a new developer look at the code in 2030 and understand the data flow?
+
+Does the database handle 50,000 entries without hitting a size limit?
+
+Does the app stay online if the server experiences a power flicker? (Auto-restart via PM2).

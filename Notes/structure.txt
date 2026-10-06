@@ -1,0 +1,14 @@
+src/
+├── context/
+│   └── AuthContext.tsx       # Manages who is logged in and their role
+├── components/
+│   └── ui/                   # Shared basic pieces (Buttons, Inputs, Cards)
+├── features/                 # Everything grouped by what it DOES
+│   ├── auth/
+│   │   └── LoginPage.tsx
+│   ├── dashboard/
+│   │   ├── DashboardLayout.tsx
+│   │   └── RoleCards.tsx     # The grid of cards based on roles
+│   └── forms/                # Where future department forms will live
+│       ├── ClientExcelForm.tsx # The initial form you are building for her
+│       └── SharedExportBtn.tsx

@@ -1,0 +1,31 @@
+IMS - Starting Point : General Info											
+											
+											
+SUPPLIER / INGREDIENT-PRODUCT APPROVAL											
+Supplier Name	Gritsup (Pty) Ltd	Complete text									
+Manufacturer Name	Farmers	Complete text									
+Ingredient/Product Supplied	Yellow Grit Maize	Dropdown Selection List	Yellow Maize Grit	Whole Corn	Palm Kernal Oil	Flavour	Glugose	Caustic	Lime	Yeast	Flour
+Source (Local/Import)	Local	Dropdown Selection List	Import	Local							
+Used in/for	Softs	Multiple Selection Dropdown List	Softs	Naks	Corn	Pretzels	Popcorns				
+	Naks										
+Factory Applicable	All Factories	Multiple Selection Dropdown List	Pietermaritzburg	Pretoria	Capetown	Queenstown	All Factories				
+Supplier Questionnaire - Exp Date	Yes                      	Dropdown Selection List	Yes	No							
+	20/05/2026	Complete text									
+Ingredient / Product Specification	Ref: GM SPEC 001	Complete text									
+Ingredient/Product Safety Data Sheets	Ref: M SDS001	Complete text									
+ISO/HACCP/FSSC Certificates - Exp Date	HACCP Certificate	Multiple Selection Dropdown List	HACCP Certificate	ISO Certificate	FSSC Certificate	GFSI Document					
+	26/09/2027	Complete text									
+HALAAL / KOSHER Certificates - Exp Date	HALAAL Certificate	Multiple Selection Dropdown List	HALAAL Certificate	Kosher Certificate							
+	29/05/2027	Complete text									
+Micro Test Reports 	Received - Inspec	Dropdown Selection List	Received - In Spec	Received - Not In Spec	Not Received 	Not Received - Awaiting	Not Applicable				
+Heavy Metals Test Reports	Not Received - Not applicable	Dropdown Selection List	Received - In Spec	Received - Not In Spec	Not Received 	Not Received - Awaiting	Not Applicable				
+Chemicals Test Reports	Received - Not in Spec	Dropdown Selection List	Received - In Spec	Received - Not In Spec	Not Received 	Not Received - Awaiting	Not Applicable				
+Pesticide Test Reports	Not Received - Awaiting tests	Dropdown Selection List	Received - In Spec	Received - Not In Spec	Not Received 	Not Received - Awaiting	Not Applicable				
+Declarations	GMO 	Multiple Selection Dropdown List	Melamine	Red Sudan	GMO						
+Other	Certificate of Acceptability	Complete text									
+Approval Status	Approved	Dropdown Selection List	Approved	Not Approved	On Hold						
+Approved By	DC Stores Manager	Dropdown Selection List	DC Manager	COO/Director	R&D Manager	Buyer					
+Reason For Approval	Cost	Multiple Selection Dropdown List	Cost	Availability	Quantity	Compliance					
+	Availability										
+Date of Approval	20/05/2026	Complete text									
+											
